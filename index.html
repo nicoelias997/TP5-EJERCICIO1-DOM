@@ -16,23 +16,21 @@
     <header class="container text-center mt-2">
        <h1>Comenzar el juego</h1>
        <p>Una vez que presiones el boton 'comenzar', se generara un numero aleatorio en el cual deberas adivinar!</p>
-       <button class="btn btn-danger py-2">Comenzar</button>
+       <button class="btn btn-danger py-2" onclick="generarNumAleatorio()">Comenzar</button>
     </header>
     <main>
-        <section class="d-flex container col-12 text-center mt-4">
-            <article class="col-6">
+        <section class="d-flex container text-center mt-4">
+            <article class="col-12" id="articulo">
                 <h6>Adivina el numero:</h6>
                 <p>El numero debe estar contenido entre 1-10</p>
                 
                 <div class="input-group">
-                    <input type="number" class="form-control border border-secondary" placeholder="Elije un numero del 1 al 10" aria-label="Recipient's username" aria-describedby="botonAdivinar">
-                    <button class="btn btn-secondary" type="button" id="botonAdivinar">Adivinar...</button>
+                    <input type="number" class="form-control border border-secondary" placeholder="Elije un numero del 1 al 10" aria-label="Recipient's username" aria-describedby="botonAdivinar" id="numeroUsuario" value="">
+                    <button class="btn btn-secondary" type="submit" id="botonAdivinar" onclick="adivinarNumero()" for="numeroUsuario">Adivinar...</button>
                   </div>
+            <p class="mt-4" id="cambiarParrafo">¿Seras capaz de adivinar el numero?</p>
             </article>
 
-            <article class="col-6">
-                <p>¿Seras capaz de adivinar el numero?</p>
-            </article>
         </section>
        
     </main>
