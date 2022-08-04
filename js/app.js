@@ -11,31 +11,30 @@ const generarNumAleatorio = () => {
 }
 
 const adivinarNumero2 = () => {
-    let vidas = 3;
-   do{
-        let numeroUsuario = document.getElementById("numeroUsuario").value;
+    let vidas = 3
+    let numeroUsuario = document.getElementById("numeroUsuario").value;
 
-        if(numeroAleatorio != numeroUsuario){
-            vidas--
+    if(numeroAleatorio != numeroUsuario){
+   do{
         if(numeroAleatorio > numeroUsuario){
+        vidas--
+
             alert(`Numero elegido menor al numero aleatorio, elige otro numero. Te quedan ${vidas} vidas.`);   
             cambiarParrafo.innerHTML = `Numero elegido menor al numero aleatorio, elige otro numero. Te quedan ${vidas} vidas.`;
         }
         else if(numeroAleatorio < numeroUsuario){
+            vidas--
             alert(`Numero elegido mayor al numero aleatorio, elige otro numero. Te quedan ${vidas} vidas.`);
             cambiarParrafo.innerHTML = `Numero elegido mayor al numero aleatorio, elige otro numero. Te quedan ${vidas} vidas.`;
-        
         }
         return vidas
-
-    } else if(numeroUsuario == numeroAleatorio){
-        alert(`Felicidades, has adivinado el numero! El numero era ${numeroAleatorio}`);           
-        cambiarParrafo.innerHTML = `Felicidades, has adivinado el numero! El numero era ${numeroAleatorio}`
-        cambiarParrafo.className = "fs-1 text-danger mt-2";
-        break;
-            }  
-} while(vidas > 0);
-
+    } while(vidas > 0);
+} 
+else if(numeroUsuario == numeroAleatorio){
+    alert(`Felicidades, has adivinado el numero! El numero era ${numeroAleatorio}`);           
+    cambiarParrafo.innerHTML = `Felicidades, has adivinado el numero! El numero era ${numeroAleatorio}`
+    cambiarParrafo.className = "fs-1 text-danger mt-2";
+        } 
     }
 
 
